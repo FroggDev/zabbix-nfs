@@ -58,13 +58,13 @@ MACRO | Description
 {$NFSSHARES} | the list of NFS shares that should be available, to set multiple shares they must be separated by **:**
 
 Exemple:
-![Zabbix NFS configuration sample](/todo)
+![Zabbix NFS configuration sample](https://tool.frogg.fr/upload/github/zabbix-nfs/macros.png)
 
-# Template content
-![Zabbix NFS Template](/todo)
+# Template items
+![Zabbix NFS Template](https://tool.frogg.fr/upload/github/zabbix-nfs/items.png)
 
 # Template triggers
-![Zabbix NFS Template triggers](/todo)
+![Zabbix NFS Template triggers](https://tool.frogg.fr/upload/github/zabbix-nfs/triggers.png)
 
 # Debuging
 (TODO)
