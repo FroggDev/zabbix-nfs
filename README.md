@@ -17,9 +17,15 @@ By the way you may require sudoer rights to run the command.
 
 # Installation
 
+## Content
+The template installation require 2 files:
+* **frogg_nfs_check.sh** Zabbix external script
+* **frogg_nfs_check.xml** Zabbix template configuration
+
 ## External script
 
 You need to place the script **frogg_nfs_check.sh** into zabbix external forlder **externalscripts** (by default in **/usr/lib/zabbix/externalscripts**) 
+
 You can find the external script folder in Zabbix configuration file **zabbix_server.conf** (by default in **/etc/zabbix/zabbix_server.conf**)
 
 You will need to add execute permission on the script
