@@ -13,7 +13,7 @@ git commit -m "%msg%"
 
 git push
 
-@REM git tag -d v1.0.0
+git tag -d %version%
 
 git push origin :refs/tags/%version%
 

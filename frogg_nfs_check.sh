@@ -57,8 +57,8 @@ echo $VERSION
 # @return nfs share not found
 function checkNfsShare()
 {
-# Init NFS share not available (epmty by default)
-RESULT=""
+# Init result (0 by default = ok)
+RESULT=0
 
 # Get NFS information using showmount without error messages
 NFSDATA=$(showmount -e $1 2> /dev/null)
