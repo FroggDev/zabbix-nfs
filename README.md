@@ -2,6 +2,8 @@
 
 Tested on Zabbix 4.4
 
+Link : https://share.zabbix.com/atc/template-module-nfs
+
 # Introduction
 Template for zabbix to check nfs share availability using external script.
 It can check:
