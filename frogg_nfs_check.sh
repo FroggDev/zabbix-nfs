@@ -57,8 +57,8 @@ echo $VERSION
 # @return nfs share not found
 function checkNfsShare()
 {
-# Init result (0 by default = ok)
-RESULT=0
+# Init result (empty by default = ok)
+RESULT=""
 
 # Get NFS information using showmount without error messages
 NFSDATA=$(showmount -e $1 2> /dev/null)
@@ -69,7 +69,7 @@ IFS=$'\n' read -rd '' -a NFSDATAS <<< "$NFSDATA"
 # Get NFS share set as params and store it as an array
 SHARES=$(echo $2 | tr ":" "\n")
 
-#For each NFS share test if exist in server NFS share list
+# For each NFS share test if exist in server NFS share list
 for SHARE in $SHARES
 do
         # Check if NFS share does not exist in NFS server shares
@@ -78,7 +78,8 @@ do
         fi
 done
 
-echo $RESULT
+# Return 0 if all is ok else the string to display
+[[ $RESULT = "" ]] && echo "0" || echo $RESULT
 }
 
 ########
