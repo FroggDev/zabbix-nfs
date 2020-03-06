@@ -13,7 +13,8 @@ It can check:
 The script use the commands **showmount** & **rpcinfo** so it requires the linux package **nfs-common**
 
 To install it you can use the package manager of your distribution
-For exemple
+
+Exemple
 ```bash
 apt-get install nfs-common
 ```
@@ -83,6 +84,8 @@ To get the last log lines you can use for example:
 ```bash
 tail -f /var/log/zabbix/zabbix_server.log
 ```
-Then look at the script trouble, for example:
+Then look at the script trouble...
+
+Example:
 ![Zabbix NFS error sample](https://tool.frogg.fr/upload/github/zabbix-nfs/error.png)
 In this case Zabbix cannot find the path of the script as you can see *no such file or directory*
