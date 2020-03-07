@@ -9,7 +9,7 @@ Template for zabbix to check nfs share availability using external script.
 It can check:
 * If NFS server is accepting request
 * The NFS server version
-* If NFS share are available
+* If NFS shares are available
 
 # Requirement
 The script use the commands **showmount** & **rpcinfo** so it requires the linux package **nfs-common**
@@ -35,7 +35,7 @@ You need to place the script **frogg_nfs_check.sh** into zabbix external forlder
 
 You can find the external script folder in Zabbix configuration file **zabbix_server.conf** (by default in **/etc/zabbix/zabbix_server.conf**)
 
-You will need to add execute permission on the script
+You will need to add execute permission to the script
 ```bash
 chmod +x frogg_nfs_check.sh 
 ```
@@ -75,7 +75,7 @@ Exemple:
 
 Going further...This step is working with most of externals scripts
 
-If you got troubles getting an external script working, first :
+If you got troubles getting an external script working :
 1. Check the Zabbix tab **Monitoring > lastest data**
 If you select an host, you should see all items linked to it, check for your item and you should see the lasted data linked to it.
 If it appear in gray (disabled) that mean there is something wrong with the external script (rights, path, arguments ...)
