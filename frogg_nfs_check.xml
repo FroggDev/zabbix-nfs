@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.4</version>
-    <date>2020-03-06T11:42:21Z</date>
+    <date>2020-03-08T13:52:09Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -66,18 +66,6 @@
                     </triggers>
                 </item>
             </items>
-            <macros>
-                <macro>
-                    <macro>{$NFSSHARES}</macro>
-                    <value>/bkESXI:/isoESXI</value>
-                    <description>NFS Shares to test</description>
-                </macro>
-                <macro>
-                    <macro>{$NFSVERSION}</macro>
-                    <value>3</value>
-                    <description>NFS Min version</description>
-                </macro>
-            </macros>
         </template>
     </templates>
 </zabbix_export>

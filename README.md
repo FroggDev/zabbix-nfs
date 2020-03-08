@@ -58,7 +58,7 @@ The template use 2 macros :
 MACRO | Description
 ----- | -----------
 {$NFSVERSION} | the NFS version that should be returned by the server
-{$NFSSHARES} | the list of NFS shares that should be available, to set multiple shares they must be separated by **:**
+{$NFSSHARES} | the list of NFS shares that should be available, to set multiple shares they must be separated by **;**
 
 Exemple:
 ![Zabbix NFS configuration sample](https://tool.frogg.fr/upload/github/zabbix-nfs/macros.png)
