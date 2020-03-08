@@ -1,4 +1,4 @@
-### Zabbix Template Module NFS version 1.0.0
+### Zabbix Template Module NFS version 1.0.1
 
 Tested on Zabbix 4.4
 
