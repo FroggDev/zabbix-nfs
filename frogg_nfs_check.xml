@@ -39,7 +39,7 @@
                     <value_type>TEXT</value_type>
                     <triggers>
                         <trigger>
-                            <expression>{last()}&lt;&gt;0</expression>
+                            <expression>{strlen()}&gt;0</expression>
                             <name>NFS share {ITEM.VALUE} unavailable on {HOST.NAME}</name>
                             <priority>AVERAGE</priority>
                         </trigger>

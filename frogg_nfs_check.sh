@@ -79,7 +79,7 @@ do
   [[ ! " ${NFSDATAS[@]} " =~ " ${SHARE} " ]] && RESULT="${RESULT}[${SHARE}]"
 done
 
-[[ $RESULT = "" ]] && echo "0" || echo $RESULT
+echo $RESULT
 }
 
 ########
