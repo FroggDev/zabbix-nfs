@@ -36,7 +36,7 @@ function getNfsVersion()
 VERSION=0
 
 # Get NFS information using rpcinfo without error messages
-TESTNFS=$(rpcinfo -u $1 nfs 2> /dev/null)
+TESTNFS=$(rpcinfo -t $1 nfs 2> /dev/null)
 
 # Split all lines in the array TESTNFS
 IFS=$'\n' read -rd '' -a TESTNFSLINES <<<"$TESTNFS"
