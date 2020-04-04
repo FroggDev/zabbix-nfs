@@ -1,4 +1,4 @@
-### Zabbix Template Module NFS version 1.0.1
+### Zabbix Template Module NFS version 1.0.3
 
 Tested on Zabbix 4.4
 
@@ -19,6 +19,8 @@ Exemple
 apt-get install nfs-common
 ```
 By the way you may require sudoer rights to run the command.
+
+On linux NFS server you may need to install **rpcbind** service to get information from **rpcinfo** command
 
 # Installation
 
