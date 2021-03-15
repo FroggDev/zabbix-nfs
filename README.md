@@ -92,3 +92,8 @@ Then look at the script trouble...
 Example:
 ![Zabbix NFS error sample](https://tool.frogg.fr/upload/github/zabbix-nfs/error.png)
 In this case Zabbix cannot find the path of the script as you can see *no such file or directory*
+
+# Contributors
+[![](https://avatars.githubusercontent.com/u/3765812?s=50&u=a377d0b319be56f5917f500be1ea24f2610324c7&v=4)](https://github.com/FroggDev)
+[![](https://avatars.githubusercontent.com/u/48913164?s=50&u=a148e291f87278136cbbcd1a303911a2bd7777d2&v=4)](https://github.com/SiKreuz)
+
