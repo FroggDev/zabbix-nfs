@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>4.4</version>
-    <date>2020-03-08T13:52:09Z</date>
+    <version>5.2</version>
+    <date>2021-03-14T13:31:06Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -12,8 +12,8 @@
     </groups>
     <templates>
         <template>
-            <template>Template Module NFS</template>
-            <name>Template Module NFS</name>
+            <template>NFS Share</template>
+            <name>NFS Share</name>
             <description>This template check NFS version and shares</description>
             <groups>
                 <group>
@@ -31,12 +31,16 @@
             <items>
                 <item>
                     <name>Check NFS share</name>
-                    <type>EXTERNAL</type>
-                    <key>frogg_nfs_check.sh[share,{HOST.CONN},{$NFSSHARES}]</key>
+                    <key>nfsshare.share[{HOST.CONN},{$NFSSHARES}]</key>
                     <delay>2m</delay>
                     <history>7d</history>
                     <trends>0</trends>
                     <value_type>TEXT</value_type>
+                    <applications>
+                        <application>
+                            <name>NFS share</name>
+                        </application>
+                    </applications>
                     <triggers>
                         <trigger>
                             <expression>{strlen()}&gt;0</expression>
@@ -47,11 +51,16 @@
                 </item>
                 <item>
                     <name>Check NFS version</name>
-                    <type>EXTERNAL</type>
-                    <key>frogg_nfs_check.sh[version,{HOST.CONN}]</key>
+                    <key>nfsshare.version[{HOST.CONN}]</key>
                     <delay>30m</delay>
                     <history>7d</history>
+                    <trends>0</trends>
                     <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>NFS share</name>
+                        </application>
+                    </applications>
                     <triggers>
                         <trigger>
                             <expression>{last()}=0</expression>
@@ -66,6 +75,18 @@
                     </triggers>
                 </item>
             </items>
+            <macros>
+                <macro>
+                    <macro>{$NFSSHARES}</macro>
+                    <value>/nfsshare</value>
+                    <description>List of shares separated by ,</description>
+                </macro>
+                <macro>
+                    <macro>{$NFSVERSION}</macro>
+                    <value>4</value>
+                    <description>NFS version expected</description>
+                </macro>
+            </macros>
         </template>
     </templates>
 </zabbix_export>

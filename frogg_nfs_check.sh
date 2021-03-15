@@ -70,7 +70,7 @@ NFSDATA=$(showmount -e $1 2> /dev/null)
 IFS=$'\n' read -rd '' -a NFSDATAS <<< "$NFSDATA"
 
 # Get NFS share set as params and store it as an array
-SHARES=$(echo $2 | tr ";" "\n")
+SHARES=$(echo $2 | tr "," "\n")
 
 #For each NFS share test if exist in server NFS share list
 for SHARE in $SHARES
