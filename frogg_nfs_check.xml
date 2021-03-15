@@ -79,7 +79,7 @@
                 <macro>
                     <macro>{$NFSSHARES}</macro>
                     <value>/nfsshare</value>
-                    <description>List of shares seperated by ;</description>
+                    <description>List of shares separated by ,</description>
                 </macro>
                 <macro>
                     <macro>{$NFSVERSION}</macro>
