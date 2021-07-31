@@ -1,13 +1,13 @@
 ### Zabbix Template Module NFS version 1.0.4
 
-Tested on Zabbix 5.2
+Tested on Zabbix 4.4 to 5.2
 
 # Introduction
 Template for zabbix to check nfs share availability using external script.
 It can check:
 * If NFS server is accepting request
-* The NFS server version
 * If NFS share are available
+* The NFS server version
 
 # Requirement
 The script use the commands **showmount** & **rpcinfo** so it requires the linux package **nfs-common**
@@ -97,10 +97,10 @@ Exemple:
 ![Zabbix NFS configuration sample](https://tool.frogg.fr/upload/github/zabbix-nfs/macros-1.0.4.png)
 
 # Template items
-![Zabbix NFS Template](https://tool.frogg.fr/upload/github/zabbix-nfs/items.png)
+![Zabbix NFS Template](https://tool.frogg.fr/upload/github/zabbix-nfs/items-1.0.4.png)
 
 # Template triggers
-![Zabbix NFS Template triggers](https://tool.frogg.fr/upload/github/zabbix-nfs/triggers.png)
+![Zabbix NFS Template triggers](https://tool.frogg.fr/upload/github/zabbix-nfs/triggers-1.0.4.png)
 
 # Debugging
 

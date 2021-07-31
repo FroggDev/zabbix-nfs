@@ -12,7 +12,7 @@
     </groups>
     <templates>
         <template>
-            <template>Template Module NFS Share</template>
+            <template>NFS Share</template>
             <name>Template Module NFS Share</name>
             <description>This template check NFS version and shares</description>
             <groups>
