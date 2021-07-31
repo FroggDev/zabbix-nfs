@@ -36,10 +36,22 @@ The script will be launched by Zabbix server, testing if client nfs share is ava
 That mean Zabbix network must be able to see nfs sharing of the client on the network.
 
 * All the files are installed on Zabbix server, none is required on the client.
-* First check your external script folder, in most of new version you can find it in `/etc/zabbix/externalscripts` but it could be `/usr/lib/zabbix/externalscripts`
-in the installation we will use `/etc/zabbix/externalscripts` but remember to adapt it with your own configuration
 * Your network must allow zabbix server to see nfs share of the client
-* For a cleaner script calling this template now use `userparameter` file, You can verify the path where  they are stored in your `/etc/zabbix/zabbix_agentd.conf` (default location)
+* First check your external script folder, in most of new version you can find it in `/usr/lib/zabbix/externalscripts`
+You can find the ExternalScripts folder in your `/etc/zabbix/zabbix_server.conf` (default location)
+```
+### Option: ExternalScripts
+#       Full path to location of external scripts.
+#       Default depends on compilation options.
+#       To see the default path run command "zabbix_server --help".
+#
+# Mandatory: no
+# Default:
+# ExternalScripts=${datadir}/zabbix/externalscripts
+
+ExternalScripts=/usr/lib/zabbix/externalscripts
+```
+* For a cleaner script calling this template now use `userparameter` file, You can verify the path stored in your `/etc/zabbix/zabbix_agentd.conf` (default location)
 ```
 ### Option: Include
 #       You may include individual files or all files in a directory in the configuration file.
