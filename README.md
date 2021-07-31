@@ -69,7 +69,7 @@ If `/etc/zabbix/zabbix_agentd.conf.d/` doesn't exist you ca create it
 
 ### Scripts
 
-Place the `frogg_nfs_check.sh` in `/etc/zabbix/externalscripts`. 
+Place the `frogg_nfs_check.sh` in `/usr/lib/zabbix/externalscripts`. 
 
 You will need to add execute permission on the script
 ```console
@@ -79,8 +79,6 @@ chmod +x frogg_nfs_check.sh
 ### User parameters
 
 Add the `userparameter_frogg_nfs_check.conf` to `/etc/zabbix/zabbix_agentd.conf.d/` (default location) 
-
-Remember that if you use another location for your external scripts, you have to edit the `userparameter_frogg_nfs_check.conf` accordingly.
 
 ### Testing the installation
 
