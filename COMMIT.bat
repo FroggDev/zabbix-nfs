@@ -1,7 +1,7 @@
 @ECHO off
 
 @REM todo : get dynamically
-SET version=1.0.2
+SET version=1.0.4
 
 SET /p msg=Commit message for version %version%:
 

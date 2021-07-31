@@ -12,8 +12,8 @@
     </groups>
     <templates>
         <template>
-            <template>NFS Share</template>
-            <name>NFS Share</name>
+            <template>Template Module NFS Share</template>
+            <name>Template Module NFS Share</name>
             <description>This template check NFS version and shares</description>
             <groups>
                 <group>
@@ -25,12 +25,12 @@
             </groups>
             <applications>
                 <application>
-                    <name>NFS share</name>
+                    <name>NFS</name>
                 </application>
             </applications>
             <items>
                 <item>
-                    <name>Check NFS share</name>
+                    <name>NFS share</name>
                     <key>nfsshare.share[{HOST.CONN},{$NFSSHARES}]</key>
                     <delay>2m</delay>
                     <history>7d</history>
@@ -38,7 +38,7 @@
                     <value_type>TEXT</value_type>
                     <applications>
                         <application>
-                            <name>NFS share</name>
+                            <name>NFS</name>
                         </application>
                     </applications>
                     <triggers>
@@ -58,7 +58,7 @@
                     <value_type>FLOAT</value_type>
                     <applications>
                         <application>
-                            <name>NFS share</name>
+                            <name>NFS</name>
                         </application>
                     </applications>
                     <triggers>
@@ -78,7 +78,7 @@
             <macros>
                 <macro>
                     <macro>{$NFSSHARES}</macro>
-                    <value>/nfsshare</value>
+                    <value>/nfsshare1,/nfsshare2</value>
                     <description>List of shares separated by ,</description>
                 </macro>
                 <macro>

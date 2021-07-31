@@ -1,24 +1,1 @@
-# Changelog
-All notable changes to this project will be documented in this file.
-
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
-## [Unreleased]
-
-## [1.0.3] - 2021-03-15
-### Added
-- Added compatibility for Zabbix 5.2 
-- Change separator from ";" to ","
-- 
-## [1.0.2] - 2020-03-09
-### Added
-- Fix trigger not triggering Problems 
-
-## [1.0.1] - 2020-03-08
-### Added
-- Change separator from ":" to ";"
-
-## [1.0.0] - 2020-03-06
-### Added
-- First version
+# ChangelogAll notable changes to this project will be documented in this file.The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).## [Unreleased]## [1.0.4] - 2021-07-31### Added- Recreate the previous release with some minor change, to be sure it use "," instead of ";" as separator- Using userparamter for a cleanner external script usage- Documentation improved- Fix files encoding## [1.0.3] - 2021-03-15### Added- Added compatibility for Zabbix 5.2 - Change separator from ";" to "," ## [1.0.2] - 2020-03-09### Added- Fix trigger not triggering Problems ## [1.0.1] - 2020-03-08### Added- Change separator from ":" to ";"## [1.0.0] - 2020-03-06### Added- First version

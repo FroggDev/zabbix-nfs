@@ -25,20 +25,50 @@ On linux NFS server you may need to install **rpcbind** service to get informati
 # Installation
 
 ## Content
-The template installation require 2 files:
+The template installation require 3 files:
 * `frogg_nfs_check.sh` Zabbix external script
 * `frogg_nfs_check.xml` Zabbix template configuration
+* `userparameter_frogg_nfs_check.conf` Zabbix shortcut for a clean call
+
+## Introduction
+
+The script will be launched by Zabbix server, testing if client nfs share is available using a script.
+That mean Zabbix network must be able to see nfs sharing of the client on the network.
+
+* All the files are installed on Zabbix server, none is required on the client.
+* First check your external script folder, in most of new version you can find it in `/etc/zabbix/externalscripts` but it could be `/usr/lib/zabbix/externalscripts`
+in the installation we will use `/etc/zabbix/externalscripts` but remember to adapt it with your own configuration
+* Your network must allow zabbix server to see nfs share of the client
+* For a cleaner script calling this template now use `userparameter` file, You can verify the path where  they are stored in your `/etc/zabbix/zabbix_agentd.conf` (default location)
+```
+### Option: Include
+#       You may include individual files or all files in a directory in the configuration file.
+#       Installing Zabbix will create include directory in /usr/local/etc, unless modified during the compile time.
+#
+# Mandatory: no
+# Default:
+# Include=
+
+Include=/etc/zabbix/zabbix_agentd.d/*.conf
+```
+If `/etc/zabbix/zabbix_agentd.conf.d/` doesn't exist you ca create it 
 
 ## External script
 
-Place the `frogg_nfs_check.sh` in `/etc/zabbix/externalscripts`. If you choose another location for your external scripts, you have to edit the `userparameter_frogg_nfs_check.conf` accordingly.
+### Scripts
+
+Place the `frogg_nfs_check.sh` in `/etc/zabbix/externalscripts`. 
 
 You will need to add execute permission on the script
 ```console
 chmod +x frogg_nfs_check.sh 
 ```
 
-Finally add the `userparameter_frogg_nfs_check.conf` to `/etc/zabbix/zabbix_agentd.conf.d/` or any other of your configuration directories, that are specified in the configuration file of the zabbix agent (default `/etc/zabbix/zabbix_agentd.conf`).
+### User parameters
+
+Add the `userparameter_frogg_nfs_check.conf` to `/etc/zabbix/zabbix_agentd.conf.d/` (default location) 
+
+Remember that if you use another location for your external scripts, you have to edit the `userparameter_frogg_nfs_check.conf` accordingly.
 
 ### Testing the installation
 
@@ -64,7 +94,7 @@ MACRO | Description
 {$NFSSHARES} | the list of NFS shares that should be available, to set multiple shares they must be separated by `,` 
 
 Exemple:
-![Zabbix NFS configuration sample](https://tool.frogg.fr/upload/github/zabbix-nfs/macros.png)
+![Zabbix NFS configuration sample](https://tool.frogg.fr/upload/github/zabbix-nfs/macros-1.0.4.png)
 
 # Template items
 ![Zabbix NFS Template](https://tool.frogg.fr/upload/github/zabbix-nfs/items.png)
